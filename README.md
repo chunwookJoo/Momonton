@@ -10,4 +10,3 @@ Create Vanilla.js
 5. Daily Photo
 
 # Try
-https://jeongha-joo.github.io/Momonton/
