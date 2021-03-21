@@ -1,4 +1,5 @@
 body {
+  margin: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -13,7 +14,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 40rem;
+  width: 35rem;
   margin: 0 auto;
   background-repeat: no-repeat;
   background-position: center;
@@ -23,7 +24,7 @@ h1 {
   color: #fff;
   text-align: center;
   font-size: 140px;
-  margin-bottom: 3rem;
+  margin: 3rem 0;
 }
 .nameForm {
   width: 100%;
@@ -32,13 +33,84 @@ h1 {
 }
 .nameForm input {
   font-size: 2.5rem;
+  width: 100%;
   outline: none;
+  color: #fff;
+  box-sizing: border-box;
   border: 0;
   border-bottom: 4px solid #fff;
   background-color: transparent;
 }
-input::placeholder {
-  color: bisque;
+.nameForm label {
+  color: #fff;
+  position: absolute;
+  pointer-events: none;
+  left: 0;
+  font-size: 2.5rem;
+  bottom: 5px;
+  transition: all 0.3s ease;
+}
+.nameForm input:focus + label {
+  transform: translateY(-150%);
+  font-size: 1.5rem;
+}
+h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.todo-form-grettings {
+  width: 30%;
+  text-align: center;
+  position: relative;
+  padding-top: 30px;
+}
+.todo-form-grettings input {
+  font-size: 1.5rem;
+  width: 400px;
+  outline: none;
+  color: #fff;
+  box-sizing: border-box;
+  border: 0;
+  border-bottom: 2px solid #fff;
+  background-color: transparent;
+}
+.todo-form-grettings label {
+  color: #fff;
+  position: absolute;
+  pointer-events: none;
+  left: 0;
+  font-size: 1.5rem;
+  bottom: 5px;
+  transition: all 0.3s ease;
+}
+.todo-form-grettings input:focus + label {
+  transform: translateY(-120%);
+  font-size: 1rem;
+}
+
+footer {
+  width: 500px;
+  padding-left: 20px;
+}
+.todo-list-form {
+  width: 85%;
+  height: 200px;
+  overflow: auto;
+}
+.todo-list-form ul {
+  padding-left: 20px;
+}
+.todo-list-form ul li {
+  width: 90%;
+  padding: 0 10px 10px 0;
+}
+.todo-list-form ul li button {
+  float: right;
+}
+.todo-list-form ul li span {
+  word-break: keep-all;
 }
 h2,
 li,
@@ -47,6 +119,11 @@ li,
 }
 .clicked {
   color: blueviolet;
+}
+.nameForm,
+.user-grettings,
+.todo-form-grettings {
+  display: none;
 }
 .showing {
   display: block;

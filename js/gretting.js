@@ -1,6 +1,7 @@
 const form = document.querySelector(".js-form");
 const input = form.querySelector("input");
-const gretting = document.querySelector(".js-grettings");
+const user_gretting = document.querySelector(".js-grettings");
+const todo_gretting = document.querySelector(".js-toDoForm");
 
 const USER_LS = "currentUser",
   SHOWING_CN = "showing";
@@ -26,8 +27,9 @@ function askForName() {
 
 function paintGretting(text) {
   form.classList.remove(SHOWING_CN);
-  gretting.classList.add(SHOWING_CN);
-  gretting.innerText = `Hello ${text}`;
+  user_gretting.classList.add(SHOWING_CN);
+  todo_gretting.classList.add(SHOWING_CN);
+  user_gretting.innerText = `Have a nice day "${text}" !!`;
 }
 
 function loadName() {
